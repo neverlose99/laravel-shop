@@ -201,12 +201,24 @@
           </div>
 
           <div class="header-tools__item hover-container">
-            <a href="login.html" class="header-tools__item">
-              <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <use href="#icon_user" />
-              </svg>
-            </a>
+            @guest
+              {{-- CHƯA ĐĂNG NHẬP: Hiển thị link Login --}}
+              <a href="{{ route('login') }}" class="header-tools__item">
+                <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon_user" />
+                </svg>
+              </a>
+            @else
+              {{-- ĐÃ ĐĂNG NHẬP: Hiển thị link đến trang My Account --}}
+              <a href="{{ route('account.dashboard') }}" class="header-tools__item">
+                <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon_user" />
+                </svg>
+                {{-- Có thể hiển thị tên user ở đây --}}
+                {{-- <span class="ms-1 d-none d-lg-inline">{{ Auth::user()->name }}</span> --}}
+              </a>
+              {{-- Cân nhắc thêm Dropdown Logout ở đây nếu theme hỗ trợ --}}
+            @endguest
           </div>
 
           <a href="wishlist.html" class="header-tools__item">
