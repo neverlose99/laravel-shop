@@ -4,6 +4,16 @@
             {{ session('status') }}
         </div>
     @endif
+    
+    <!-- Thông báo yêu cầu đăng nhập -->
+    @if (session('intended'))
+        <div class="alert alert-info mb-4" role="alert">
+            <strong>Vui lòng đăng nhập</strong> để tiếp tục!
+            <br>
+            <span class="small">Chưa có tài khoản? <a href="{{ route('register') }}" class="alert-link">Đăng ký ngay</a></span>
+        </div>
+    @endif
+    
     <form method="POST" action="{{ route('login') }}">
         @csrf
         <div class="mb-3">
@@ -33,6 +43,14 @@
             <button type="submit" class="btn btn-primary">
                 {{ __('Log in') }}
             </button>
+        </div>
+        
+        <!-- Link đăng ký cho người dùng mới -->
+        <div class="text-center mt-4 pt-3 border-top">
+            <p class="mb-0">
+                Don’t have an account? 
+                <a href="{{ route('register') }}" class="text-decoration-none fw-bold">Sign up now</a>
+            </p>
         </div>
     </form>
 </x-guest-layout>

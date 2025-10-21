@@ -3,8 +3,8 @@
       <div class="row row-cols-lg-5 row-cols-2">
         <div class="footer-column footer-store-info col-12 mb-4 mb-lg-0">
           <div class="logo">
-            <a href="index.html">
-              <img src="assets/images/logo.png" alt="SurfsideMedia" class="logo__image d-block" />
+            <a href="{{ url('/') }}">
+              <img src="{{ asset('assets/images/logo.png') }}" alt="Fashion Shop" class="logo__image d-block" />
             </a>
           </div>
           <p class="footer-address">123 Beach Avenue, Surfside City, CA 00000</p>
@@ -59,22 +59,22 @@
         <div class="footer-column footer-menu mb-4 mb-lg-0">
           <h6 class="sub-menu__title text-uppercase">Company</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="about-2.html" class="menu-link menu-link_us-s">About Us</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">About Us</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Careers</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Affiliates</a></li>
-            <li class="sub-menu__item"><a href="blog_list1.html" class="menu-link menu-link_us-s">Blog</a></li>
-            <li class="sub-menu__item"><a href="contact-2.html" class="menu-link menu-link_us-s">Contact Us</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Blog</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Contact Us</a></li>
           </ul>
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
           <h6 class="sub-menu__title text-uppercase">Shop</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">New Arrivals</a></li>
-            <li class="sub-menu__item"><a href="shop3.html" class="menu-link menu-link_us-s">Accessories</a></li>
-            <li class="sub-menu__item"><a href="shop4.html" class="menu-link menu-link_us-s">Men</a></li>
-            <li class="sub-menu__item"><a href="shop5.html" class="menu-link menu-link_us-s">Women</a></li>
-            <li class="sub-menu__item"><a href="shop1.html" class="menu-link menu-link_us-s">Shop All</a></li>
+            <li class="sub-menu__item"><a href="{{ route('products.index') }}" class="menu-link menu-link_us-s">New Arrivals</a></li>
+            <li class="sub-menu__item"><a href="{{ route('products.index') }}" class="menu-link menu-link_us-s">Accessories</a></li>
+            <li class="sub-menu__item"><a href="{{ route('products.index') }}" class="menu-link menu-link_us-s">Men</a></li>
+            <li class="sub-menu__item"><a href="{{ route('products.index') }}" class="menu-link menu-link_us-s">Women</a></li>
+            <li class="sub-menu__item"><a href="{{ route('products.index') }}" class="menu-link menu-link_us-s">Shop All</a></li>
           </ul>
         </div>
 
@@ -119,7 +119,7 @@
   <footer class="footer-mobile container w-100 px-5 d-md-none bg-body">
     <div class="row text-center">
       <div class="col-4">
-        <a href="index.html" class="footer-mobile__link d-flex flex-column align-items-center">
+        <a href="{{ url('/') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_home" />
@@ -129,7 +129,7 @@
       </div>
 
       <div class="col-4">
-        <a href="index.html" class="footer-mobile__link d-flex flex-column align-items-center">
+        <a href="{{ route('products.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_hanger" />
@@ -139,13 +139,13 @@
       </div>
 
       <div class="col-4">
-        <a href="index.html" class="footer-mobile__link d-flex flex-column align-items-center">
+        <a href="#" class="footer-mobile__link d-flex flex-column align-items-center">
           <div class="position-relative">
             <svg class="d-block" width="18" height="18" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <use href="#icon_heart" />
             </svg>
-            <span class="wishlist-amount d-block position-absolute js-wishlist-count">3</span>
+            <span class="wishlist-amount d-block position-absolute js-wishlist-count">0</span>
           </div>
           <span>Wishlist</span>
         </a>
