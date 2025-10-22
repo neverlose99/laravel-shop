@@ -93,13 +93,13 @@
                                   name="shipping_address" 
                                   placeholder="Địa chỉ" 
                                   style="height: 80px"
-                                  minlength="10"
+                                  minlength="6"
                                   required>{{ old('shipping_address') }}</textarea>
                         <label for="shipping_address">Số nhà, tên đường *</label>
                         @error('shipping_address')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @else
-                            <small class="text-muted">Ví dụ: 123 Nguyễn Văn A</small>
+                            <small class="text-muted">Ví dụ: 123 Lê Lợi, 45A Trần Hưng Đạo</small>
                         @enderror
                     </div>
 

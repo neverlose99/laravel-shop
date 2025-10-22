@@ -1,8 +1,6 @@
-<x-admin-layout>
-    <x-slot name="header">
-        <h1>Quản Lý Sản Phẩm</h1>
-    </x-slot>
+@extends('layouts.admin')
 
+@section('content')
     <div class="page-header d-flex justify-content-between align-items-center mb-4">
         <div>
             <h2 class="mb-1">Danh Sách Sản Phẩm</h2>
@@ -97,4 +95,4 @@
     <div class="mt-4">
         {{ $products->links() }}
     </div>
-</x-admin-layout>
+@endsection

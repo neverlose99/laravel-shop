@@ -27,7 +27,11 @@
                         <td>
                             <strong>{{ $order->order_number }}</strong>
                         </td>
-                        <td>{{ $order->created_at->format('d/m/Y H:i') }}</td>
+                        <td>
+                            {{ $order->created_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i') }}
+                            <br>
+                            <small class="text-muted">{{ $order->created_at->timezone('Asia/Ho_Chi_Minh')->diffForHumans() }}</small>
+                        </td>
                         <td>
                             <strong class="text-danger">${{ number_format($order->total_amount, 2) }}</strong>
                         </td>

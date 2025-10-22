@@ -28,6 +28,8 @@ class Order extends Model
 
     protected $casts = [
         'total_amount' => 'decimal:2',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     // Relationships
@@ -73,5 +75,22 @@ class Order extends Model
         ];
 
         return $badges[$this->payment_status] ?? '<span class="badge bg-secondary">Unknown</span>';
+    }
+
+    // Format datetime cho Việt Nam
+    public function getFormattedCreatedAtAttribute()
+    {
+        return $this->created_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s');
+    }
+
+    public function getFormattedUpdatedAtAttribute()
+    {
+        return $this->updated_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s');
+    }
+
+    // Hiển thị thời gian theo kiểu "2 giờ trước"
+    public function getTimeAgoAttribute()
+    {
+        return $this->created_at->timezone('Asia/Ho_Chi_Minh')->diffForHumans();
     }
 }

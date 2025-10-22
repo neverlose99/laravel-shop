@@ -488,7 +488,7 @@
 
         <!-- Content Area -->
         <div class="content-wrapper">
-            {{ $slot }}
+            @yield('content')
         </div>
     </div>
 

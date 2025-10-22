@@ -28,7 +28,11 @@
                                 <div class="col-md-6">
                                     <p class="mb-2">
                                         <strong>Ngày đặt:</strong> 
-                                        {{ $order->created_at->format('d/m/Y H:i') }}
+                                        {{ $order->created_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s') }}
+                                    </p>
+                                    <p class="mb-2 text-muted small">
+                                        <i class="fas fa-clock me-1"></i>
+                                        {{ $order->created_at->timezone('Asia/Ho_Chi_Minh')->diffForHumans() }}
                                     </p>
                                     <p class="mb-2">
                                         <strong>Trạng thái:</strong> 

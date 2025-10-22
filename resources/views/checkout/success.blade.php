@@ -37,7 +37,9 @@
                                         <strong>Ngày đặt:</strong>
                                     </div>
                                     <div class="col-6 text-end">
-                                        {{ $order->created_at->format('d/m/Y H:i') }}
+                                        {{ $order->created_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s') }}
+                                        <br>
+                                        <small class="text-muted">{{ $order->created_at->timezone('Asia/Ho_Chi_Minh')->diffForHumans() }}</small>
                                     </div>
                                 </div>
                                 <div class="row mb-3">

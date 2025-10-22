@@ -1,8 +1,6 @@
-<x-admin-layout>
-    <x-slot name="header">
-        <h1>Thêm Sản Phẩm Mới</h1>
-    </x-slot>
+@extends('layouts.admin')
 
+@section('content')
     <div class="page-header mb-4">
         <a href="{{ route('admin.products.index') }}" class="btn btn-secondary mb-3">
             <i class="fas fa-arrow-left me-2"></i>Quay lại danh sách
@@ -108,4 +106,4 @@
             }
         }
     </script>
-</x-admin-layout>
+@endsection
